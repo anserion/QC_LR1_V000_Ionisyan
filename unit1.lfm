@@ -1,0 +1,379 @@
+object Form1: TForm1
+  Left = 124
+  Height = 488
+  Top = 146
+  Width = 949
+  BorderStyle = bsDialog
+  Caption = 'Классическая вычислительная модель шаблон ЛР1 (автор Ионисян  А.С.)'
+  ClientHeight = 488
+  ClientWidth = 949
+  LCLVersion = '1.6.2.0'
+  object CheckGroupA: TCheckGroup
+    Left = 24
+    Height = 288
+    Top = 8
+    Width = 73
+    AutoFill = True
+    Caption = 'A='
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.TopBottomSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 1
+    ClientHeight = 263
+    ClientWidth = 69
+    Items.Strings = (
+      'bit 0'
+      'bit 1'
+      'bit 2'
+      'bit 3'
+      'bit 4'
+      'bit 5'
+      'bit 6'
+      'bit 7'
+      'bit 8'
+      'bit 9'
+    )
+    OnItemClick = CheckGroupAItemClick
+    TabOrder = 0
+    Data = {
+      0A00000002020202020202020202
+    }
+  end
+  object CheckGroupB: TCheckGroup
+    Left = 104
+    Height = 288
+    Top = 8
+    Width = 72
+    AutoFill = True
+    Caption = 'B='
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.TopBottomSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 1
+    ClientHeight = 263
+    ClientWidth = 68
+    Items.Strings = (
+      'bit 0'
+      'bit 1'
+      'bit 2'
+      'bit 3'
+      'bit 4'
+      'bit 5'
+      'bit 6'
+      'bit 7'
+      'bit 8'
+      'bit 9'
+    )
+    OnItemClick = CheckGroupBItemClick
+    TabOrder = 1
+    Data = {
+      0A00000002020202020202020202
+    }
+  end
+  object CheckGroup_AplusB: TCheckGroup
+    Left = 192
+    Height = 288
+    Top = 8
+    Width = 73
+    AutoFill = True
+    Caption = 'A+B'
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.TopBottomSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 1
+    ClientHeight = 263
+    ClientWidth = 69
+    Items.Strings = (
+      'bit 0'
+      'bit 1'
+      'bit 2'
+      'bit 3'
+      'bit 4'
+      'bit 5'
+      'bit 6'
+      'bit 7'
+      'bit 8'
+      'bit 9'
+    )
+    TabOrder = 2
+    Data = {
+      0A00000002020202020202020202
+    }
+  end
+  object Button_exit: TButton
+    Left = 840
+    Height = 25
+    Top = 440
+    Width = 75
+    Caption = 'Выход'
+    OnClick = Button_exitClick
+    TabOrder = 3
+  end
+  object Memo_help: TMemo
+    Left = 24
+    Height = 168
+    Top = 304
+    Width = 600
+    Lines.Strings = (
+      'Использование программы.'
+      '1. Установите биты первого операнда флажками в панели "A="'
+      '2. Установите биты второго операнда флажками в панели "B="'
+      '3. Результаты промежуточных вычислний отобраазятся автоматически'
+      '4. Для выхода из программы нажмите кнопку "Выход"'
+      '//Вычисляемая формула:'
+      'c = ((a+b)^3 - 7*b + a) div b,'
+      'd = ((a+b)^3 - 7*b + a) mod b'
+    )
+    TabOrder = 4
+  end
+  object CheckGroup_apb_pow2: TCheckGroup
+    Left = 280
+    Height = 288
+    Top = 8
+    Width = 73
+    AutoFill = True
+    Caption = '(A+B)^2'
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.TopBottomSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 1
+    ClientHeight = 263
+    ClientWidth = 69
+    Items.Strings = (
+      'bit 0'
+      'bit 1'
+      'bit 2'
+      'bit 3'
+      'bit 4'
+      'bit 5'
+      'bit 6'
+      'bit 7'
+      'bit 8'
+      'bit 9'
+    )
+    TabOrder = 5
+    Data = {
+      0A00000002020202020202020202
+    }
+  end
+  object CheckGroup_apb_pow3: TCheckGroup
+    Left = 368
+    Height = 288
+    Top = 8
+    Width = 73
+    AutoFill = True
+    Caption = '(A+B)^3'
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.TopBottomSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 1
+    ClientHeight = 263
+    ClientWidth = 69
+    Items.Strings = (
+      'bit 0'
+      'bit 1'
+      'bit 2'
+      'bit 3'
+      'bit 4'
+      'bit 5'
+      'bit 6'
+      'bit 7'
+      'bit 8'
+      'bit 9'
+    )
+    TabOrder = 6
+    Data = {
+      0A00000002020202020202020202
+    }
+  end
+  object CheckGroup_C: TCheckGroup
+    Left = 768
+    Height = 288
+    Top = 8
+    Width = 73
+    AutoFill = True
+    Caption = 'C='
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.TopBottomSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 1
+    ClientHeight = 263
+    ClientWidth = 69
+    Items.Strings = (
+      'bit 0'
+      'bit 1'
+      'bit 2'
+      'bit 3'
+      'bit 4'
+      'bit 5'
+      'bit 6'
+      'bit 7'
+      'bit 8'
+      'bit 9'
+    )
+    TabOrder = 7
+    Data = {
+      0A00000002020202020202020202
+    }
+  end
+  object CheckGroup_D: TCheckGroup
+    Left = 848
+    Height = 288
+    Top = 8
+    Width = 73
+    AutoFill = True
+    Caption = 'D='
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.TopBottomSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 1
+    ClientHeight = 263
+    ClientWidth = 69
+    Items.Strings = (
+      'bit 0'
+      'bit 1'
+      'bit 2'
+      'bit 3'
+      'bit 4'
+      'bit 5'
+      'bit 6'
+      'bit 7'
+      'bit 8'
+      'bit 9'
+    )
+    TabOrder = 8
+    Data = {
+      0A00000002020202020202020202
+    }
+  end
+  object CheckGroup_b7: TCheckGroup
+    Left = 456
+    Height = 288
+    Top = 8
+    Width = 73
+    AutoFill = True
+    Caption = '7*B'
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.TopBottomSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 1
+    ClientHeight = 263
+    ClientWidth = 69
+    Items.Strings = (
+      'bit 0'
+      'bit 1'
+      'bit 2'
+      'bit 3'
+      'bit 4'
+      'bit 5'
+      'bit 6'
+      'bit 7'
+      'bit 8'
+      'bit 9'
+    )
+    TabOrder = 9
+    Data = {
+      0A00000002020202020202020202
+    }
+  end
+  object CheckGroup_apb_pow3_minus_b7: TCheckGroup
+    Left = 536
+    Height = 288
+    Top = 8
+    Width = 97
+    AutoFill = True
+    Caption = '(a+b)^3-7b'
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.TopBottomSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 1
+    ClientHeight = 263
+    ClientWidth = 93
+    Items.Strings = (
+      'bit 0'
+      'bit 1'
+      'bit 2'
+      'bit 3'
+      'bit 4'
+      'bit 5'
+      'bit 6'
+      'bit 7'
+      'bit 8'
+      'bit 9'
+    )
+    TabOrder = 10
+    Data = {
+      0A00000002020202020202020202
+    }
+  end
+  object CheckGroup_apb_pow3_minus_b7_plus_a: TCheckGroup
+    Left = 640
+    Height = 288
+    Top = 8
+    Width = 113
+    AutoFill = True
+    Caption = '(a+b)^3-7b+a'
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.TopBottomSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 1
+    ClientHeight = 263
+    ClientWidth = 109
+    Items.Strings = (
+      'bit 0'
+      'bit 1'
+      'bit 2'
+      'bit 3'
+      'bit 4'
+      'bit 5'
+      'bit 6'
+      'bit 7'
+      'bit 8'
+      'bit 9'
+    )
+    TabOrder = 11
+    Data = {
+      0A00000002020202020202020202
+    }
+  end
+end
